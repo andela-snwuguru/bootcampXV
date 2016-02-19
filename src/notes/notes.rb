@@ -44,6 +44,7 @@ class NotesApplication
 	end
 
 	
+	#Utility methods
 	def print note
 		return puts 'Invalid note records' if !note.is_a? Hash
 		puts "Note ID: #{note[:id]}"
@@ -56,9 +57,3 @@ class NotesApplication
 		puts "--------------------------------------------------------------------"
 	end
 end
-
-notes = NotesApplication.new 'Sunday'   
-notes.create 'testing note'
-notes.create 'test for a very bi thing'
-notes.create 'test for another major factor'
-notes.search 'for'
