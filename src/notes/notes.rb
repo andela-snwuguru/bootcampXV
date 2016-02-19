@@ -24,7 +24,13 @@ class NotesApplication
 	end
 
 	def search search_text
-		
+		return false if search_text.length == 0
+		result = @notes.select{|note| note[:note].match(/^?#{search_text}/)}
+		printLine
+		puts "Showing results for search <#{search_text}>"
+		printLine
+		puts "No result found" if result.length == 0
+		result.each{|note| print note}
 	end
 
 	def delete note_id
@@ -53,8 +59,6 @@ end
 
 notes = NotesApplication.new 'Sunday'   
 notes.create 'testing note'
-notes.create 'test 3'
-notes.create 'test 4'
-notes.list
-notes.edit 2, 'just modified'
-notes.list
+notes.create 'test for a very bi thing'
+notes.create 'test for another major factor'
+notes.search 'for'
