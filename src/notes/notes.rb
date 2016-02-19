@@ -6,7 +6,9 @@ class NotesApplication
 	end
 
 	def create note_content
-
+		return nil if note_content.length == 0
+		@notes << {author: @author,note: note_content}
+		@notes.length - 1
 	end
 
 	def list
@@ -17,8 +19,8 @@ class NotesApplication
 
 	end
 
-	def search
-		@author
+	def search search_text
+		
 	end
 
 	def delete
@@ -31,4 +33,4 @@ class NotesApplication
 end
 
 notes = NotesApplication.new 'Sunday'   
-puts notes.search
+puts notes.create 'testing note'
