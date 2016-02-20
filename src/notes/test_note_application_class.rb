@@ -162,7 +162,7 @@ RSpec.describe "NotesApplication" do
 
 	end
 
-	describe "Case for exception" do
+	describe "Case for exceptions" do
 		it "constructor require argument" do
 			expect { NotesApplication.new() }.to raise_error(ArgumentError)
 		end
@@ -181,12 +181,11 @@ RSpec.describe "NotesApplication" do
 			note = NotesApplication.new('user')
 			expect { note.delete() }.to raise_error(ArgumentError)
 		end
-	end
-	# it "contructor do not accept optional author name" do
-	#     exception = assert_raise(ArgumentError) do
-	#       note = NotesApplication.new()
-	#     end
-	#     assert_match(/wrong number of arguments/, exception.message)
- #  	end
 
+		it "create method require arguments" do
+			note = NotesApplication.new('user')
+			expect { note.create() }.to raise_error(ArgumentError)
+		end
+	end
+	
 end
