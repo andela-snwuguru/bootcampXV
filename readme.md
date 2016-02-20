@@ -1,4 +1,9 @@
-Andela food for thaught
+ANDELA BOOT CAMP ASSIGNMENT
 
-1. best way to share code
-2. how do we make sure our code works
+------------------------------------------
+		NOTE APPLICATION
+------------------------------------------
+
+to run command line interface, notes_application.rb is the entry file
+
+$ ruby notes_application.rb
