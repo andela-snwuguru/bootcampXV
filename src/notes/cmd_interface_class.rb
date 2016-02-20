@@ -1,6 +1,7 @@
 require_relative 'notes_application_class.rb'
 module BootCamp
 	class CommanLineInterface
+		
 		def initialize
 			welcome
 			start_note_app
